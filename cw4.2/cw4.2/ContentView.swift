@@ -40,14 +40,17 @@ struct ContentView: View {
                 myGrocery.append(newItemEntry)
             }label: {
                 Text("Add")
-            }.background(.green)
-                
-                
+            }
+            .padding(.all).background(.green).foregroundColor(.white).shadow(radius: 20)
+            
+            
             
             Spacer()
             
+            
             TextField("New Item", text: $newItemEntry)
-                .background(.black)
+                .padding(.all)
+                .background(Color(hue: 1.0, saturation: 0.024, brightness: 0.839))
                 .foregroundColor(.white)
             
             Spacer()
@@ -55,11 +58,12 @@ struct ContentView: View {
                 myGrocery.remove(at: 0)
             }label: {
                 Text("Remove")
-            }.background(.red)
+            }.padding(.all).background(.red).foregroundColor(.white).shadow(radius: 20)
+            
             
         }.padding()
         
-            
+        
     }
     
 }
